@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KVVersionManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KVVersionManager.'
+  s.summary          = 'a library use for KVManager app to check update version and warning user'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
