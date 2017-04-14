@@ -1,0 +1,6 @@
+framework module KVVersionManager {
+  umbrella header "KVVersionManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

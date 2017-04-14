@@ -1,0 +1,19 @@
+PODS:
+  - iVersion (1.11.5)
+  - KVVersionManager (0.1.0)
+
+DEPENDENCIES:
+  - iVersion
+  - KVVersionManager (from `../`)
+
+EXTERNAL SOURCES:
+  KVVersionManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  iVersion: 3a93a89259eb3b52b0a8ba52c46a0027fa6b4d30
+  KVVersionManager: daef99aceb316891e6f01cad91dda583bef44202
+
+PODFILE CHECKSUM: eddf093ca09fa7752b5c852079aa7980fd488bbe
+
+COCOAPODS: 1.1.1
