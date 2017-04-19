@@ -25,7 +25,6 @@
 		B6DC6115707037FA8ABA51C223142C8A /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57ABD685893BD9B6F1C61F8F3CE5AF89 /* iVersion.bundle */; };
 		DB0B1C9909D3D75D0537CB5C1AC5DE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13B8E014ED538F224A9143F2DEDFA4 /* Foundation.framework */; };
 		E8071B7F3DE0953DEB1EE61163D5169E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF13B8E014ED538F224A9143F2DEDFA4 /* Foundation.framework */; };
-		F3623240085AD5139B47204E9DA86327 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = E84B9F38ED4FCD9D3FE3691475710C3C /* ReplaceMe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +85,6 @@
 		CBD9103BF9BE50166020802297338690 /* Pods-KVVersionManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KVVersionManager_Tests.modulemap"; sourceTree = "<group>"; };
 		CBF7C1806FBCB45A8068EFF4EBE7C72A /* KVVersionManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVVersionManager-umbrella.h"; sourceTree = "<group>"; };
 		D66AA3FB366F8914E8EBC25492279525 /* Pods-KVVersionManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KVVersionManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		E84B9F38ED4FCD9D3FE3691475710C3C /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		EE3EE18C357066AA80CF7ECA062BAF91 /* Pods_KVVersionManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVVersionManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E9E4E09E084CE7F9161E4E34FD885D /* Pods-KVVersionManager_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KVVersionManager_Example-resources.sh"; sourceTree = "<group>"; };
 		F67FDFE7A290CCD9307F916857A125D2 /* KVVersionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KVVersionManager.h; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			children = (
 				F67FDFE7A290CCD9307F916857A125D2 /* KVVersionManager.h */,
 				27CC9B4DF60AB675F9C4B1BD3DAFFBA7 /* KVVersionManager.m */,
-				E84B9F38ED4FCD9D3FE3691475710C3C /* ReplaceMe.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -481,7 +478,6 @@
 			files = (
 				A448D07CCC33813909D397C718850A03 /* KVVersionManager-dummy.m in Sources */,
 				494E0D49FB1882D5EB279D96113FEAEA /* KVVersionManager.m in Sources */,
-				F3623240085AD5139B47204E9DA86327 /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
