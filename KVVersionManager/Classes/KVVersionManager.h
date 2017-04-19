@@ -16,7 +16,7 @@
 
 @interface KVVersionManager : NSObject
 + (KVVersionManager *)sharedInstance;
-@property (nonatomic, strong) id<KVVersionManagerDelegate> delegate;
+@property (weak,nonatomic) id<KVVersionManagerDelegate> delegate;
 @property (assign,nonatomic) NSInteger numberOfDaysDelay;
 @property (assign,nonatomic) BOOL shouldNotShowAlert;
 
