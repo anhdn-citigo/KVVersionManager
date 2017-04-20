@@ -60,25 +60,24 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 }
 
 - (BOOL)isValidVersionString :(NSString *)version {
-    NSArray *dotCharacterPlaces = [self dotCharacterPlacesIn:version];
+    NSArray<NSString *> *chars = [version componentsSeparatedByString:@"."];
+
     //Check if contain 4 number and 3 "." only
-    if (dotCharacterPlaces.count != 3) {
+    if (chars.count != 4) {
         return NO;
     }
-    NSString *firstNumber = [version substringToIndex:[dotCharacterPlaces[0] integerValue]];
-    NSString *secondNumber = [version substringWithRange:NSMakeRange([dotCharacterPlaces[0] integerValue] + 1, [dotCharacterPlaces[1] integerValue] - [dotCharacterPlaces[0] integerValue] - 1)];
-    NSString *thirdNumber = [version substringWithRange:NSMakeRange([dotCharacterPlaces[1] integerValue] + 1, [dotCharacterPlaces[2] integerValue] - [dotCharacterPlaces[1] integerValue] - 1)];
-    NSString *fouthNumber = [version substringFromIndex:[dotCharacterPlaces[2] integerValue] + 1];
-    
+
     //Check all string between "." is number
-    if (![self isNumber:firstNumber] || ![self isNumber:secondNumber] || ![self isNumber:thirdNumber] || ![self isNumber:fouthNumber]) {
-        return NO;
+    for (NSString *stringNumber in chars) {
+        if (![self isNumber:stringNumber]) {
+            return NO;
+        }
     }
     
     //Check if fouth number is between 1 and 3
     NSNumberFormatter *formater = [[NSNumberFormatter alloc] init];
     formater.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *lastNumber = [formater numberFromString:fouthNumber];
+    NSNumber *lastNumber = chars[3];
     if (lastNumber.integerValue < 1 || lastNumber.integerValue > 3) {
         return NO;
     }
@@ -92,17 +91,6 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
         return YES;
     }
     return NO;
-}
-
-- (NSArray *)dotCharacterPlacesIn:(NSString *)versionString {
-    NSMutableArray *dotCharacters = [[NSMutableArray alloc] init];
-    for (int index = 0; index < versionString.length; index ++) {
-        unichar character = [versionString characterAtIndex:index];
-        if (character == '.') {
-            [dotCharacters addObject:@(index)];
-        }
-    }
-    return dotCharacters;
 }
 
 - (void)showAlertToUser {
