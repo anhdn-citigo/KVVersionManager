@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     //Check if fouth number is between 1 and 3
     NSNumberFormatter *formater = [[NSNumberFormatter alloc] init];
     formater.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *lastNumber = chars[3];
+    NSNumber *lastNumber = [formater numberFromString:chars[3]];
     if (lastNumber.integerValue < 1 || lastNumber.integerValue > 3) {
         return NO;
     }
