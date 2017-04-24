@@ -168,6 +168,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     }
     if (!self.shouldNotShowAlert) {
         [topViewController presentViewController:alert animated:YES completion:nil];
+        self.shouldNotShowAlert = YES;
     }
 }
 
