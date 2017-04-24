@@ -155,6 +155,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
         } else {
             //First time show update alert
             [self openUpdatePage];
+            self.shouldNotShowAlert = NO;
         }
     }];
     
@@ -179,7 +180,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     [[UIApplication sharedApplication] openURL:updateURL];
 }
 
-- (NSInteger)dayFrom:(NSDate *)startDate to :(NSDate *)endDate{
+- (NSInteger)dayFrom:(NSDate *)startDate to:(NSDate *)endDate{
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitDay
                                                         fromDate:startDate
@@ -197,8 +198,8 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 #endif
     NSDate *date = [KVUserDefault objectForKey:version];
     if (!date) {
-        [KVUserDefault setObject:[NSDate date] forKey:version];
-        return;
+        date = [NSDate date];
+        [KVUserDefault setObject:date forKey:version];
     }
     
     NSDate *currentDate = [NSDate date];
