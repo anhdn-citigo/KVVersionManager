@@ -41,8 +41,11 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 }
 
 - (void)manualCheckVersion {
-    iVersion *versionManager = [iVersion sharedInstance];
-    [versionManager checkForNewVersion];
+    KVVersionAlertType alertType = [self checkTypeAlertWithVersion:self.storeVersion];
+    if (alertType == KVVersionAlertForce) {
+        iVersion *versionManager = [iVersion sharedInstance];
+        [versionManager checkForNewVersion];
+    }
 }
 
 #pragma mark show alert
@@ -61,12 +64,12 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 
 - (BOOL)isValidVersionString :(NSString *)version {
     NSArray<NSString *> *chars = [version componentsSeparatedByString:@"."];
-
+    
     //Check if contain 4 number and 3 "." only
     if (chars.count != 4) {
         return NO;
     }
-
+    
     //Check all string between "." is number
     for (NSString *stringNumber in chars) {
         if (![self isNumber:stringNumber]) {
@@ -186,6 +189,9 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 
 - (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
     self.storeVersion = version;
+#ifdef DEBUG
+    self.storeVersion = @"1.1.1.2";
+#endif
     NSDate *date = [KVUserDefault objectForKey:version];
     if (!date) {
         [KVUserDefault setObject:[NSDate date] forKey:version];
