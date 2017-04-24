@@ -199,7 +199,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     }
     
     NSDate *currentDate = [NSDate date];
-    NSInteger numberOfDay = [self dayFrom:date to:currentDate]; //[currentDate daysFrom:date];
+    NSInteger numberOfDay = [self dayFrom:date to:currentDate];
     if (numberOfDay >= self.numberOfDaysDelay) {
         //Show alert update to user
         [self showAlertToUser];
