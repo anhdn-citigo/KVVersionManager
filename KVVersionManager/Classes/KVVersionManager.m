@@ -141,7 +141,7 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cập nhật"
                                                                    message:msg
                                                             preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Không" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Để sau" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         self.shouldNotShowAlert = NO;
     }];
     
