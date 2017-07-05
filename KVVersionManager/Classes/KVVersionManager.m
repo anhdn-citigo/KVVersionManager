@@ -135,9 +135,9 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     }
     NSString *msg;
     if (shouldShowOption) {
-        msg = [NSString stringWithFormat:@"Chúng tôi vừa cập nhật phiên bản %@ với nhiều cải tiến. Bạn có muốn tải về không?", self.storeVersion];
+        msg = [NSString stringWithFormat:@"KiotViet vừa nâng cấp phiên bản %@ với những cải tiến đáng kể. Cập nhật và trải nghiệm ngay!", self.storeVersion];
     } else {
-        msg = [NSString stringWithFormat:@"Chúng tôi vừa cập nhật phiên bản %@ với nhiều cải tiến. %@", self.storeVersion,updateAlertShowed?@"":@" Chọn ""Cập nhật"" để tải về."];
+        msg = [NSString stringWithFormat:@"KiotViet vừa nâng cấp phiên bản %@ với những cải tiến đáng kể. %@", self.storeVersion,updateAlertShowed?@"":@" Chọn ""Cập nhật"" để tải về."];
     }
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cập nhật"
