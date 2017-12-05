@@ -195,9 +195,6 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 
 - (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
     self.storeVersion = version;
-#ifdef DEBUG
-    self.storeVersion = @"1.1.12";
-#endif
     NSDate *date = [KVUserDefault objectForKey:version];
     if (!date) {
         date = [NSDate date];
