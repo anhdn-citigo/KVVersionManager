@@ -172,9 +172,14 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
         topViewController = topViewController.presentedViewController;
     }
     if (!self.shouldNotShowAlert) {
-        [topViewController presentViewController:alert animated:YES completion:nil];
-        self.shouldNotShowAlert = YES;
+        /// không đi nếu là force update ~ shouldShowOption == NO
+        self.shouldNotShowAlert = shouldShowOption;
+        /// Kiểm tra nếu đang hiện thị popup báo cập nhật thì không hiện nữa
+        if (![topViewController.title isEqualToString:@"Cập nhật"]) {
+            [topViewController presentViewController:alert animated:YES completion:nil];
+        }
     }
+    
 }
 
 - (void)openUpdatePage {
@@ -192,6 +197,10 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 }
 
 #pragma mark - iVersion delegate
+
+- (void)iVersionVersionCheckDidFailWithError:(NSError *)error {
+    [self showAlertToUser];
+}
 
 - (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
     self.storeVersion = version;
