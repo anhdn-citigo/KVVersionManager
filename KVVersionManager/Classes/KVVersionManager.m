@@ -11,6 +11,8 @@
 #import "KVVersionManager.h"
 
 #define KVUserDefault [[NSUserDefaults alloc] initWithSuiteName:@"group.net.citigo.kvmanager"]
+#define KVLatestVersion @"net.citigo.setting.app.version"
+#define KVLatestVersionDetails @"net.citigo.setting.app.versionDetails"
 
 typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     KVVersionAllertNone      = 1,
@@ -37,7 +39,11 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 - (void)startManageVersion {
     iVersion *versionManager = [iVersion sharedInstance];
     versionManager.delegate = self;
-    self.storeVersion = @"";
+    if ([KVUserDefault objectForKey:KVLatestVersion]) {
+        self.storeVersion = [KVUserDefault objectForKey:KVLatestVersion];
+    } else {
+        self.storeVersion = @"";
+    }
 }
 
 - (void)manualCheckVersion {
@@ -199,11 +205,11 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 #pragma mark - iVersion delegate
 
 - (void)iVersionVersionCheckDidFailWithError:(NSError *)error {
-    [self showAlertToUser];
+    NSString *version = [KVUserDefault objectForKey:KVLatestVersion];
+    [self showAlerIfNeedWithVersion:version];
 }
 
-- (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
-    self.storeVersion = version;
+- (void)showAlerIfNeedWithVersion:(NSString *)version {
     NSDate *date = [KVUserDefault objectForKey:version];
     if (!date) {
         date = [NSDate date];
@@ -216,6 +222,15 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
         //Show alert update to user
         [self showAlertToUser];
     }
+}
+
+- (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
+    [KVUserDefault setObject:version forKey:KVLatestVersion];
+    [KVUserDefault setObject:versionDetails forKey:KVLatestVersionDetails];
+    [KVUserDefault synchronize];
+    self.storeVersion = version;
+    
+    [self showAlerIfNeedWithVersion:version];
 }
 
 - (BOOL)iVersionShouldDisplayNewVersion:(NSString *)version details:(NSString *)versionDetails {
