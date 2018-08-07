@@ -47,7 +47,6 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 }
 
 - (void)manualCheckVersion {
-    KVVersionAlertType alertType = [self checkTypeAlertWithVersion:self.storeVersion];
     iVersion *versionManager = [iVersion sharedInstance];
     [versionManager checkForNewVersion];
 }
