@@ -67,29 +67,29 @@
 		240B035C4E8B244DD7CF09123FE1C508 /* iVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iVersion.m; path = iVersion/iVersion.m; sourceTree = "<group>"; };
 		2772743882DCE55E85208BDD4A8D5CDF /* Pods-KVVersionManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KVVersionManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2914C4345A845CF0785ECD1BDAE49AB7 /* Pods-KVVersionManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KVVersionManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		29D773D2114D8B7C2E6D078DE3669E5B /* KVVersionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KVVersionManager.framework; path = KVVersionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3020756009BBB41C7E25E53E7FF78111 /* KVVersionManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = KVVersionManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		29D773D2114D8B7C2E6D078DE3669E5B /* KVVersionManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KVVersionManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3020756009BBB41C7E25E53E7FF78111 /* KVVersionManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = KVVersionManager.podspec; sourceTree = "<group>"; };
 		3740113FF57C5BBB01AA27D07D7AD6A5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D28698741F2FDB38D916C0E02BC097 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		459283B9A5C0E3015307070B08B449D7 /* KVVersionManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVVersionManager-umbrella.h"; sourceTree = "<group>"; };
 		4C4627201EC88424EB72117C7EF8585C /* Pods-KVVersionManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KVVersionManager_Tests-resources.sh"; sourceTree = "<group>"; };
-		50873DAF3BA75DFF5B6D94FD60FACC9A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		50873DAF3BA75DFF5B6D94FD60FACC9A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		57ABD685893BD9B6F1C61F8F3CE5AF89 /* iVersion.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iVersion.bundle; path = iVersion/iVersion.bundle; sourceTree = "<group>"; };
 		5D47D312C723549FFE011F0DA8A770F5 /* Pods-KVVersionManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KVVersionManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5E897FC88294672F0DF3E828330883C4 /* KVVersionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVVersionManager.h; path = KVVersionManager/Classes/KVVersionManager.h; sourceTree = "<group>"; };
 		5FFA867680F357E8DB4884B7FCDA8180 /* iVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iVersion.h; path = iVersion/iVersion.h; sourceTree = "<group>"; };
-		6537D42058688166AA38EA0A25624D95 /* Pods_KVVersionManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KVVersionManager_Example.framework; path = "Pods-KVVersionManager_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6537D42058688166AA38EA0A25624D95 /* Pods_KVVersionManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVVersionManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE0037A2E84398BA7ED306E4E4E971F /* iVersion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iVersion-dummy.m"; sourceTree = "<group>"; };
-		77AAAA3C9BF9ADD7DEE29C89282C9FA2 /* iVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iVersion.framework; path = iVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77AAAA3C9BF9ADD7DEE29C89282C9FA2 /* iVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78086631D34E40E551203A4B90483134 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9ABF58EF7119B1F4B9020533257A24 /* Pods-KVVersionManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KVVersionManager_Example-umbrella.h"; sourceTree = "<group>"; };
-		80B3687B917988D993BC38900B6BD0B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		80B3687B917988D993BC38900B6BD0B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8278C2F018D62C09B757CE77CB107A17 /* Pods-KVVersionManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KVVersionManager_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8931A17BA2DB4DD0028EBB7D822095B2 /* Pods-KVVersionManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KVVersionManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8AAC1C0F86F9AA77675EEE7608F37001 /* Pods-KVVersionManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KVVersionManager_Example.modulemap"; sourceTree = "<group>"; };
 		8E8F254B411CB4D1E4A24DB8EE0DBE1E /* Pods-KVVersionManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KVVersionManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		9140228A06E113B5B2411A1F17CD925B /* Pods-KVVersionManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KVVersionManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C431112D035A049E8A4BFE3D0D01B73 /* KVVersionManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVVersionManager-prefix.pch"; sourceTree = "<group>"; };
 		9CFDA7BF1DB264FB012402C6F93B5767 /* KVVersionManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVVersionManager.xcconfig; sourceTree = "<group>"; };
 		A4844D6142FEEA83C15AE6ABC0A2E524 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		DBF9EC7ED10868BF1844105810294409 /* iVersion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iVersion-prefix.pch"; sourceTree = "<group>"; };
 		E14D81BD5AEBC9197085D688B36B8D69 /* Pods-KVVersionManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KVVersionManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ECA5704ECB20E3A7CFBFBA111A61A8A1 /* KVVersionManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KVVersionManager.modulemap; sourceTree = "<group>"; };
-		EE3EE18C357066AA80CF7ECA062BAF91 /* Pods_KVVersionManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KVVersionManager_Tests.framework; path = "Pods-KVVersionManager_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3EE18C357066AA80CF7ECA062BAF91 /* Pods_KVVersionManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVVersionManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F014A0B8D9F04E1E3BAF4B790B214C9A /* Pods-KVVersionManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KVVersionManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F708DC620211DF8C038A304EE0339D8D /* Pods-KVVersionManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KVVersionManager_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,7 +290,6 @@
 				B85FFCEF09FF9486E814AF7EAC520B67 /* Resources */,
 				77B90CD7E3480513B4788B8C59873797 /* Support Files */,
 			);
-			name = iVersion;
 			path = iVersion;
 			sourceTree = "<group>";
 		};
