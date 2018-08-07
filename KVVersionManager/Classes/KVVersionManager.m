@@ -48,10 +48,8 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 
 - (void)manualCheckVersion {
     KVVersionAlertType alertType = [self checkTypeAlertWithVersion:self.storeVersion];
-    if (alertType == KVVersionAlertForce) {
-        iVersion *versionManager = [iVersion sharedInstance];
-        [versionManager checkForNewVersion];
-    }
+    iVersion *versionManager = [iVersion sharedInstance];
+    [versionManager checkForNewVersion];
 }
 
 #pragma mark show alert
@@ -150,22 +148,23 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
                                                                    message:msg
                                                             preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Để sau" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        self.shouldNotShowAlert = NO;
+        self.shouldNotShowAlert = YES;
     }];
     
-    UIAlertAction *updateAction = [UIAlertAction actionWithTitle:updateAlertShowed?@"Hướng dẫn cập nhật":@"Cập nhật" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        
-        if (updateAlertShowed) {
-            //Incase already showed update alert for user once
-            if(self.delegate && [self.delegate respondsToSelector:@selector(didSelectViewGuide)]) {
-                [self.delegate didSelectViewGuide];
-            }
-        } else {
-            //First time show update alert
-            [self openUpdatePage];
-            self.shouldNotShowAlert = NO;
-        }
-    }];
+    UIAlertAction *updateAction = [UIAlertAction actionWithTitle:updateAlertShowed?@"Hướng dẫn cập nhật":@"Cập nhật"
+                                                           style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                                                               
+                                                               if (updateAlertShowed) {
+                                                                   //Incase already showed update alert for user once
+                                                                   if(self.delegate && [self.delegate respondsToSelector:@selector(didSelectViewGuide)]) {
+                                                                       [self.delegate didSelectViewGuide];
+                                                                   }
+                                                               } else {
+                                                                   //First time show update alert
+                                                                   [self openUpdatePage];
+                                                                   self.shouldNotShowAlert = NO;
+                                                               }
+                                                           }];
     
     
     if (shouldShowOption) {
@@ -177,15 +176,14 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     while (topViewController.presentedViewController) {
         topViewController = topViewController.presentedViewController;
     }
+    
     if (!self.shouldNotShowAlert) {
-        /// không đi nếu là force update ~ shouldShowOption == NO
-        self.shouldNotShowAlert = shouldShowOption;
+        self.shouldNotShowAlert = NO;
         /// Kiểm tra nếu đang hiện thị popup báo cập nhật thì không hiện nữa
         if (![topViewController.title isEqualToString:@"Cập nhật"]) {
             [topViewController presentViewController:alert animated:YES completion:nil];
         }
     }
-    
 }
 
 - (void)openUpdatePage {
@@ -225,11 +223,10 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 }
 
 - (void)iVersionDidDetectNewVersion:(NSString *)version details:(NSString *)versionDetails {
-    [KVUserDefault setObject:version forKey:KVLatestVersion];
+    self.storeVersion = version;
+    [KVUserDefault setObject:self.storeVersion forKey:KVLatestVersion];
     [KVUserDefault setObject:versionDetails forKey:KVLatestVersionDetails];
     [KVUserDefault synchronize];
-    self.storeVersion = version;
-    
     [self showAlerIfNeedWithVersion:version];
 }
 
