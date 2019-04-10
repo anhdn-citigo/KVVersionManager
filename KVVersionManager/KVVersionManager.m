@@ -6,13 +6,12 @@
 //  Copyright © 2017 Citigo. All rights reserved.
 //
 
-#import <iVersion/iVersion.h>
-
+#import "iVersion.h"
 #import "KVVersionManager.h"
 
-#define KVUserDefault [[NSUserDefaults alloc] initWithSuiteName:@"group.net.citigo.kvmanager"]
-#define KVLatestVersion @"net.citigo.setting.app.version"
-#define KVLatestVersionDetails @"net.citigo.setting.app.versionDetails"
+#define KVUserDefault           [[NSUserDefaults alloc] initWithSuiteName:@"group.net.citigo.kvmanager"]
+#define KVLatestVersion         @"net.citigo.setting.app.version"
+#define KVLatestVersionDetails  @"net.citigo.setting.app.versionDetails"
 
 typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     KVVersionAllertNone      = 1,

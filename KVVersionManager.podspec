@@ -11,33 +11,19 @@ Pod::Spec.new do |s|
   s.version          = '0.2.7'
   s.summary          = 'a library use for KVManager app to check update version and warning user'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
   A Library that help check current version with Appstore version with both automatic and manual way
   Use with KVManager app!
                        DESC
 
-  s.homepage         = 'https://github.com/thangpham26394/KVVersionManager'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/tuantmdev/KVVersionManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'thangpham26394' => 'thang.pd@citigo.com.vn' }
-  s.source           = { :git => 'https://github.com/thangpham26394/KVVersionManager.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/tuantmdev/KVVersionManager.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'KVVersionManager/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'KVVersionManager' => ['KVVersionManager/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.source_files = 'KVVersionManager/*.{h,m}'
+  s.resources    = 'KVVersionManager/iVersion.bundle'
   s.dependency 'iVersion'
 end

@@ -1,12 +1,18 @@
 //
 //  KVVersionManager.h
-//  KVManager
+//  KVVersionManager
 //
-//  Created by citigo on 4/12/17.
-//  Copyright © 2017 Citigo. All rights reserved.
+//  Created by Tran Manh Tuan on 4/10/19.
+//  Copyright © 2019 Citigo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//! Project version number for KVVersionManager.
+FOUNDATION_EXPORT double KVVersionManagerVersionNumber;
+
+//! Project version string for KVVersionManager.
+FOUNDATION_EXPORT const unsigned char KVVersionManagerVersionString[];
 
 @protocol KVVersionManagerDelegate <NSObject>
 
@@ -15,12 +21,14 @@
 @end
 
 @interface KVVersionManager : NSObject
-+ (KVVersionManager *)sharedInstance;
+
 @property (weak,nonatomic) id<KVVersionManagerDelegate> delegate;
 @property (assign,nonatomic) NSInteger numberOfDaysDelay;
 @property (assign,nonatomic) BOOL shouldNotShowAlert;
 
++ (KVVersionManager *)sharedInstance;
 - (void)startManageVersion;
 - (void)manualCheckVersion;
 - (void)openUpdatePage;
+
 @end
