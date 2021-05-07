@@ -203,7 +203,9 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
 
 - (void)iVersionVersionCheckDidFailWithError:(NSError *)error {
     NSString *version = [KVUserDefault objectForKey:KVLatestVersion];
-    [self showAlerIfNeedWithVersion:version];
+    if (version.length != 0) {
+        [self showAlerIfNeedWithVersion:version];
+    }
 }
 
 - (void)showAlerIfNeedWithVersion:(NSString *)version {
