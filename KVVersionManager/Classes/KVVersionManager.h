@@ -19,6 +19,7 @@
 @property (weak,nonatomic) id<KVVersionManagerDelegate> delegate;
 @property (assign,nonatomic) NSInteger numberOfDaysDelay;
 @property (assign,nonatomic) BOOL shouldNotShowAlert;
+@property (assign,nonatomic) NSString *currentAppVersion;
 
 - (void)startManageVersion;
 - (void)manualCheckVersion;

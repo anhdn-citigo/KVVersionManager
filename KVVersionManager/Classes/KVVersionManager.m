@@ -218,8 +218,14 @@ typedef NS_ENUM(NSInteger,KVVersionAlertType) {
     NSDate *currentDate = [NSDate date];
     NSInteger numberOfDay = [self dayFrom:date to:currentDate];
     if (numberOfDay >= self.numberOfDaysDelay) {
-        //Show alert update to user
-        [self showAlertToUser];
+        if ((![self.currentAppVersion isEqualToString:@""]) && ([version containsString:self.currentAppVersion])) {
+            // no need to handle this case due to application already updated to version detected by iVersion
+            // commonly: due to phase release AppStore
+            // application able to update to latest version (manualy) but failed to get version to update (auto)
+        } else {
+            //Show alert update to user
+            [self showAlertToUser];
+        }
     }
 }
 
